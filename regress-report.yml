@@ -95,64 +95,64 @@ bugreports:
 
   - summary: |
       Проверить работу оформления заказа.
-  environment: |
+    environment: |
       Chrome Версия 117.0.5938.149 (Официальная сборка), (arm64)
       macOS Ventura 13.1
-  steps-to-reproduce: |
+    steps-to-reproduce: |
       1. Добавляем любой товар из предложенных в корзину;
       2. Переходим в корзину;
       3. Нажимаем "Checkout".
-  expected-result: |
+    expected-result: |
       Должно появиться окно, подтвреждающее оформление заказа, а корзина должна отчиститься, в devtools во вкладке "network" после отправки формы должны получить код 200.
-  actual-result: |
+    actual-result: |
       После отправки формы в devtools во вкладке "network" получаем код 500.
 
   - summary: |
       Проверить может ли пользователь просматривать подробную информацию о товаре.
-  environment: |
+    environment: |
       Chrome Версия 117.0.5938.149 (Официальная сборка), (arm64)
       macOS Ventura 13.1
-  steps-to-reproduce: |
+    steps-to-reproduce: |
       1. Нажимаем на карточку товара
       2. Открываем фотографии товара
       3. Нажимаем "Add to card"
-  expected-result: |
+    expected-result: |
       Должны корректно отобразиться все фотографии товара, подробное описание товара, а также ,после нажатия на "Add to card", товара должен добавиться в корзину.
-  actual-result: |
+    actual-result: |
       На странице товара нет более подробного описания товара, описание такое же как и на карточке товара.
   
   - summary: |
       Убрать фильтр "В наличии".
-  environment: |
+    environment: |
       Chrome Версия 117.0.5938.149 (Официальная сборка), (arm64)
       macOS Ventura 13.1
-  steps-to-reproduce: |
+    steps-to-reproduce: |
       Убрать фильтр "В наличии".
-  expected-result: |
+    expected-result: |
       Должны отобразиться все товары, которые в наличии и количество которых ноль.
-  actual-result: |
+    actual-result: |
       Если убрать фильтр "В наличии", то перестанут работать остальные фильтры.
   
   - summary: |
       Проверить работу поисковой строки, указав подстроку, которой нет ни одном наименовании товара.
-  environment: |
+    environment: |
       Chrome Версия 117.0.5938.149 (Официальная сборка), (arm64)
       macOS Ventura 13.1
-  steps-to-reproduce: |
+    steps-to-reproduce: |
       Вводим строку "atbabab" в поисковую строку и нажимаем Enter.
-  expected-result: |
+    expected-result: |
       Должна появится надпись о том, что нет подходящего варианта.
-  actual-result: |
+    actual-result: |
       Отображаются все товары, фильтр перестает работать.
 
   - summary: |
       Проверить работу поисковой строки, указав подстроку, которой нет ни одном наименовании товара.
-  environment: |
+    environment: |
       Chrome Версия 117.0.5938.149 (Официальная сборка), (arm64)
       macOS Ventura 13.1
-  steps-to-reproduce: |
+    steps-to-reproduce: |
       Вводим строку "atbabab" в поисковую строку и нажимаем Enter.
-  expected-result: |
+    expected-result: |
       Должна появится надпись о том, что нет подходящего варианта.
-  actual-result: |
+    actual-result: |
       Отображаются все товары, фильтр перестает работать.
